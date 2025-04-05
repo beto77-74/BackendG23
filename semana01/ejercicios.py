@@ -36,9 +36,44 @@
 # print('Residuo: ' + format(residuo))
 
 
-cantidad = float(input('Ingrese la cantidad a invertir: '))
-interes = float(input('Ingrese el interes anual (Ej: 10,20...): '))
-anno = float(input('Ingrese el numero de años: '))
+# cantidad = float(input('Ingrese la cantidad a invertir: '))
+# interes = float(input('Ingrese el interes anual (Ej: 10,20...): '))
+# anno = float(input('Ingrese el numero de años: '))
 
-capitalObt = round((cantidad * ((interes/100+1)**anno)),2)
-print('El capital Obtenido es: ' + format(capitalObt))
+# capitalObt = round((cantidad * ((interes/100+1)**anno)),2)
+# print('El capital Obtenido es: ' + format(capitalObt))
+
+# def saludo():
+#     print('hola amiga...')
+
+# saludo()
+
+# def saludo(nombre):
+#     print('Hola ' + nombre)
+
+# saludo('Carlos')
+
+# def email(direccion):
+#     if '@' in direccion:
+#         print('Email valido')
+#     else:
+#         print('Email no valido')
+
+# email('ss')
+
+
+def sumar_numeros():
+    suma = 0
+    while True:
+        try:
+            numero = int(input("Ingresa un número (0 para terminar): "))
+            if numero == 0:
+                break
+            suma += numero
+        except ValueError:
+            print("Por favor, ingresa un número válido.")
+    return suma
+
+resultado = sumar_numeros()
+print(f"La suma de los números ingresados es: {resultado}")
+

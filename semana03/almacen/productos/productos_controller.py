@@ -38,7 +38,7 @@ class Productos(Resource):
             precioHasta = request.args.get('precioHasta')
             criterio_busqueda.append(Producto.precio <= precioHasta)
 
-            
+        # print(criterio_busqueda)   
         # al usar un arreglo en un parametro pero con el * estamos indicando que solamente queremos el contenido del arreglo mas no el arreglo como tal
         productos_encontrados = db.session.query(Producto).filter(*criterio_busqueda).all()
         print(productos_encontrados)

@@ -1,0 +1,40 @@
+Table usuarios {
+  id SERIAL PK
+  nombre TEXT
+  correo TEXT UNIQUE
+  password TEXT
+  tipo_usuario TIPO_USUARIO [DEFAULT:  "CLIENTE"]
+}
+
+Table canchas {
+  id SERIAL PK
+  nombre TEXT
+  disponible BOOL [DEFAULT: true]
+}
+
+Table reservas {
+  id SERIAL PK
+  dia DATE
+  hora_inicio TIME
+  hora_fin TIME
+  estado ESTADO_RESERVA
+  precio FLOAT
+  usuario_id INT
+  cancha_id INT
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+}
+
+Enum TIPO_USUARIO {
+  ADMIN
+  CLIENTE
+  TRABAJADOR
+}
+
+Enum ESTADO_RESERVA {
+  CREADO
+  PAGADO
+  CANCELADO
+}
+Ref: usuarios.id < reservas.usuario_id
+Ref: canchas.id < reservas.cancha_id

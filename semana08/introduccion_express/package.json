@@ -1,0 +1,25 @@
+{
+  "name": "introduccion_express",
+  "version": "1.0.0",
+  "description": "mi primer",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "backed"
+  ],
+  "author": "carlos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "nodemon": "^3.1.10"
+  }
+}

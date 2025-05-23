@@ -1,0 +1,3 @@
+sqlite 3 ARCHIVO.BD     > ingresar a la BD
+.tables                 > muestra todas las tablas en el archivo/BD
+.schema N

@@ -1,0 +1,38 @@
+{
+  "name": "3_node_con_prisma",
+  "version": "1.0.0",
+  "description": "proyecto de node utilizabdo prisma",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "prisma"
+  ],
+  "author": "Carlos",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.817.0",
+    "@aws-sdk/s3-request-presigner": "^3.817.0",
+    "@prisma/client": "^6.8.2",
+    "@types/multer": "^1.4.12",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.8.2"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}

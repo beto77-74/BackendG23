@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from 'dotenv';
 import connectDB from "./config/db.js";
-import morgan from "morgan";
+//import morgan from "morgan";
 import ProductRoutes from "./routes/product_routes.js";
 import OrderRoutes from "./routes/orders_routes.js"
 
@@ -13,7 +13,7 @@ const servidor = express();
 const PORT = process.env.PORT;
 
 servidor.use(express.json())
-servidor.use(morgan("dev"))
+//servidor.use(morgan("dev"))
 
 servidor.use("/api/producto",ProductRoutes);
 servidor.use("/api/ordenes",OrderRoutes);
@@ -26,3 +26,4 @@ servidor.listen(PORT, async () => {
         console.log(error.message);
     }
 });
+
